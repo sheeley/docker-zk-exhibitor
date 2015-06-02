@@ -34,7 +34,7 @@ cat <<- EOF > /opt/exhibitor/defaults.conf
 	backup-extra=throttle\=&bucket-name\=${S3_BUCKET}&key-prefix\=${S3_PREFIX}&max-retries\=4&retry-sleep-ms\=30000
 	observer-threshold=0
 	election-port=3888
-	zoo-cfg-extra=tickTime\=2000&initLimit\=10&syncLimit\=15&quorumListenOnAllIPs\=true
+	zoo-cfg-extra=tickTime\=500&initLimit\=10&syncLimit\=17&quorumListenOnAllIPs\=true
 	auto-manage-instances-settling-period-ms=0
 	auto-manage-instances=1
 EOF
